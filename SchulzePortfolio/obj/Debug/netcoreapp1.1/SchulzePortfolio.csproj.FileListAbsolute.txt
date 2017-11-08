@@ -1,0 +1,10 @@
+/Users/Guest/Desktop/SchulzePortfolio/SchulzePortfolio/bin/Debug/netcoreapp1.1/SchulzePortfolio.deps.json
+/Users/Guest/Desktop/SchulzePortfolio/SchulzePortfolio/bin/Debug/netcoreapp1.1/SchulzePortfolio.runtimeconfig.json
+/Users/Guest/Desktop/SchulzePortfolio/SchulzePortfolio/bin/Debug/netcoreapp1.1/SchulzePortfolio.runtimeconfig.dev.json
+/Users/Guest/Desktop/SchulzePortfolio/SchulzePortfolio/obj/Debug/netcoreapp1.1/SchulzePortfolio.csprojResolveAssemblyReference.cache
+/Users/Guest/Desktop/SchulzePortfolio/SchulzePortfolio/obj/Debug/netcoreapp1.1/SchulzePortfolio.csproj.CoreCompileInputs.cache
+/Users/Guest/Desktop/SchulzePortfolio/SchulzePortfolio/obj/Debug/netcoreapp1.1/SchulzePortfolio.AssemblyInfo.cs
+/Users/Guest/Desktop/SchulzePortfolio/SchulzePortfolio/bin/Debug/netcoreapp1.1/SchulzePortfolio.dll
+/Users/Guest/Desktop/SchulzePortfolio/SchulzePortfolio/bin/Debug/netcoreapp1.1/SchulzePortfolio.pdb
+/Users/Guest/Desktop/SchulzePortfolio/SchulzePortfolio/obj/Debug/netcoreapp1.1/SchulzePortfolio.dll
+/Users/Guest/Desktop/SchulzePortfolio/SchulzePortfolio/obj/Debug/netcoreapp1.1/SchulzePortfolio.pdb
