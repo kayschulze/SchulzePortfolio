@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using RestSharp;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
 
 namespace SchulzePortfolio.Models
 {
@@ -14,10 +15,10 @@ namespace SchulzePortfolio.Models
 
 		public static List<GitRepo> GetGitRepos()
 		{
-			var client = new RestClient("http://api.github.com");
-			//client.BaseUrl = new Uri("http://api.github.com");
+			var client = new RestClient();
+			client.BaseUrl = new Uri("http://api.github.com");
 
-			var request = new RestRequest("users/kayschulze/", Method.GET);
+			var request = new RestRequest("users/kayschulze", Method.GET);
 
 			var response = new RestResponse();
 			Task.Run(async () =>
