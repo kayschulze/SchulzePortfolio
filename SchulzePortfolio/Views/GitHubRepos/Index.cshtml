@@ -2,3 +2,7 @@
 
 <h2>All Git Repositories</h2>
 
+@foreach (var repo in Model)
+{
+    @Html.DisplayFor(m => repo.Name)
+}

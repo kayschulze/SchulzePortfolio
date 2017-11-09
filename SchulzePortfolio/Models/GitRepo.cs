@@ -18,7 +18,9 @@ namespace SchulzePortfolio.Models
 			var client = new RestClient();
 			client.BaseUrl = new Uri("http://api.github.com");
 
-			var request = new RestRequest("users/kayschulze", Method.GET);
+			var request = new RestRequest("users/kayschulze/starred", Method.GET);
+            request.AddHeader("Accept", "application/vnd.github.v3+json");
+            request.AddHeader("User-Agent", "kayschulze");
 
 			var response = new RestResponse();
 			Task.Run(async () =>
