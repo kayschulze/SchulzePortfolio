@@ -9,18 +9,22 @@ namespace SchulzePortfolio.Models
 {
 	public class GitRepo
 	{
+        public int Id { get; set; }
 		public string Name { get; set; }
 		public string Description { get; set; }
-		public string Url { get; set; }
+		public string Html_Url { get; set; }
 
-		public static List<GitRepo> GetGitRepos()
+        //public GitRepo() { }
+
+        public static List<GitRepo> GetGitRepos()
 		{
 			var client = new RestClient();
-			client.BaseUrl = new Uri("http://api.github.com");
+            client.BaseUrl = new Uri("https://api.github.com/users/kayschulze/starred");
+			client.AddDefaultHeader("User-Agent", "kayschulze");
 
-			var request = new RestRequest("users/kayschulze/starred", Method.GET);
-            request.AddHeader("Accept", "application/vnd.github.v3+json");
-            request.AddHeader("UserAgent", "kayschulze");
+			var request = new RestRequest();
+			//request.AddHeader("Accept", "application/vnd.github.v3+json");
+			//request.AddHeader("UserAgent", "kayschulze");
 
 			var response = new RestResponse();
 			Task.Run(async () =>
@@ -28,8 +32,8 @@ namespace SchulzePortfolio.Models
 				response = await GetResponseContentAsync(client, request) as RestResponse;
 			}).Wait();
 
-			JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(response.Content);
-			var gitRepoList = JsonConvert.DeserializeObject<List<GitRepo>>(jsonResponse["repos"].ToString());
+			JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(response.Content);
+			var gitRepoList = JsonConvert.DeserializeObject<List<GitRepo>>(jsonResponse.ToString());
 			return gitRepoList;
 		}
 

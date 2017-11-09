@@ -1,4 +1,20 @@
-﻿@model List<SchulzePortfolio.Models.GitRepo>
+﻿@model IEnumerable<SchulzePortfolio.Models.GitRepo>
 
-<h2>All Git Repositories</h2>
+<h2>Starred Git Repositories</h2>
 
+<div class="row">
+    @foreach (var repo in Model)
+    {
+        <div class="col-md-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3>@Html.DisplayFor(modelItem => repo.Name)</h3>
+                </div>
+                <div class="panel-body">
+                    <p>@Html.DisplayFor(modelItem => repo.Description)</p>
+                    <p>@Html.DisplayFor(modelItem => repo.Html_Url)</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
