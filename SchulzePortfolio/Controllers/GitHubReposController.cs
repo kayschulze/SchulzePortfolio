@@ -14,9 +14,8 @@ namespace KSchulzePortfolio.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            //var allRepos = GitRepo.GetGitRepos();
-            //return View(allRepos);
-            return View();
+            var allRepos = GitRepo.GetGitRepos();
+            return View(allRepos);
         }
     }
 }

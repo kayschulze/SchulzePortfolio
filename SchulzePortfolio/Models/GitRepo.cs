@@ -20,7 +20,7 @@ namespace SchulzePortfolio.Models
 
 			var request = new RestRequest("users/kayschulze/starred", Method.GET);
             request.AddHeader("Accept", "application/vnd.github.v3+json");
-            request.AddHeader("User-Agent", "kayschulze");
+            request.AddHeader("UserAgent", "kayschulze");
 
 			var response = new RestResponse();
 			Task.Run(async () =>
