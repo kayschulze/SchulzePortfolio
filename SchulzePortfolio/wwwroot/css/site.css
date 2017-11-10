@@ -12,7 +12,15 @@ textarea {
     max-width: 280px;
 }
 
-
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+    background-color: #d5f2e7;
+    border-radius: 40px;
+    color: #56340a;
+    padding: 5px;
+}
 
 /* Make .svg files in the carousel display properly in older browsers */
 .carousel-inner .item img[src$=".svg"] {
@@ -28,7 +36,7 @@ textarea {
 }
 
 .img-responsive {
-    //max-height: 200px;
+    /max-height: 200px;
 }
 
 body {
@@ -85,12 +93,8 @@ h2 {
     font-weight: bold;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
-    background-color: #d5f2e7;
-    border-radius: 40px;
-    color: #56340a;
-    padding: 5px;
+
+
+.sideimage {
+    width: 10%;
 }
