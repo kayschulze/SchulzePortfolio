@@ -8,11 +8,14 @@
         <div class="col-md-4">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3>@Html.DisplayFor(modelItem => repo.Name)</h3>
+                    <a href=@Html.DisplayFor(modelItem => repo.Html_Url)>
+                        <h3>@Html.DisplayFor(modelItem => repo.Name)</h3>
+                        <h5>(@Html.DisplayFor(modelItem => repo.Id))</h5>
+                    </a>
                 </div>
                 <div class="panel-body">
                     <p>@Html.DisplayFor(modelItem => repo.Description)</p>
-                    <p>@Html.DisplayFor(modelItem => repo.Html_Url)</p>
+                    <p><a href=@Html.DisplayFor(modelItem => repo.Html_Url)>@Html.DisplayFor(modelItem => repo.Html_Url)</a></p>
                 </div>
             </div>
         </div>
