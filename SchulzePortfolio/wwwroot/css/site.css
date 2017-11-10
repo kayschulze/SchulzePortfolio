@@ -1,10 +1,4 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    background-color: skyblue;
-}
-
-/* Wrapping element */
+﻿/* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -18,11 +12,7 @@ textarea {
     max-width: 280px;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
-}
+
 
 /* Make .svg files in the carousel display properly in older browsers */
 .carousel-inner .item img[src$=".svg"] {
@@ -44,6 +34,7 @@ textarea {
 body {
     background-color: beige;
     font-family: 'Libre Baskerville', serif;
+    padding-top: 50px;
 }
 
 .subheading {
@@ -64,7 +55,7 @@ body {
 }
 
 img {
-    width: 10%;
+    width: 100%;
 }
 
 h2 {
@@ -92,4 +83,14 @@ h2 {
 .techskills {
     color: red;
     font-weight: bold;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+    background-color: #d5f2e7;
+    border-radius: 40px;
+    color: #56340a;
+    padding: 5px;
 }

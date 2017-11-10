@@ -14,19 +14,16 @@ namespace SchulzePortfolio.Models
 		public string Description { get; set; }
 		public string Html_Url { get; set; }
 
-        //public GitRepo() { }
-
         public static List<GitRepo> GetGitRepos()
 		{
 			var client = new RestClient();
-            client.BaseUrl = new Uri("https://api.github.com/users/kayschulze/starred");
-			client.AddDefaultHeader("User-Agent", "kayschulze");
+            client.BaseUrl = new Uri("https://api.github.com/users");
 
-			var request = new RestRequest();
-			//request.AddHeader("Accept", "application/vnd.github.v3+json");
-			//request.AddHeader("UserAgent", "kayschulze");
+			var request = new RestRequest("kayschulze/starred");
+            request.AddHeader("Accept", "application/vnd.github.v3+json");
+            request.AddHeader("User-Agent", "kayschulze");
 
-			var response = new RestResponse();
+            var response = new RestResponse();
 			Task.Run(async () =>
 			{
 				response = await GetResponseContentAsync(client, request) as RestResponse;
